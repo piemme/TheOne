@@ -1,2 +1,2 @@
 # TheOne
-A simple exercise on nodejs and microservices
+A simple exercise on nodejs and microservices.
