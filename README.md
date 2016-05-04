@@ -1,5 +1,5 @@
 # TheOne
-A simple exercise on nodejs and microservices.
+A simple exercise on nodejs and microservices. Inspired by [The Walking Skeleton] (http://alistair.cockburn.us/Walking+skeleton) concept.
 
 ## Modules (or: Actors)
  * PlainOldWebService
