@@ -1,7 +1,5 @@
 TODO:
-separare modulo web application
-separare modulo HTTP
-esporre il risultato via HTTP
+
 sistema di persistenza
 
 separare modulo consumer
@@ -24,3 +22,9 @@ pulizia e standard
 
 v1.5
 separare service da web application e consumer
+
+v1.6
+separare modulo web application
+separare modulo HTTP
+esporre il risultato via HTTP
+
