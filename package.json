@@ -4,8 +4,9 @@
   "description": "A simple exercise on nodejs and microservices. Inspired by [The Walking Skeleton] (http://alistair.cockburn.us/Walking+skeleton) concept.",
   "main": "one-in-one.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node one-in-one.js"
+    "test": "./test.sh",
+    "start": "node one-in-one.js",
+    "debug": "DEBUG=* node one-in-one.js"
   },
   "repository": {
     "type": "git",
