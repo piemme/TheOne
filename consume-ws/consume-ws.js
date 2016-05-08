@@ -3,7 +3,7 @@
 var debug = require('debug')('all-one')
 var superSimpleService = require('../super-simple-service')
 
-function allOne () {
+function consumeWs () {
   return {
     consumeOne: consumeOne
   }
@@ -13,4 +13,4 @@ function allOne () {
     debug('consume service result: ' + superSimpleService().doOne())
   }
 }
-module.exports = allOne
+module.exports = consumeWs

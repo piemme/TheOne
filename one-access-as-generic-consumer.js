@@ -1,4 +1,4 @@
 'use strict'
-var allOne = require('./all-one')
-allOne().consumeOne()
+var consumeWs = require('./consume-ws')
+consumeWs().consumeOne()
 

@@ -1,8 +1,8 @@
 {
-  "name": "all-one",
+  "name": "consume-ws",
   "version": "1.0.0",
   "description": "A simple exercise on nodejs and microservices. Inspired by [The Walking Skeleton] (http://alistair.cockburn.us/Walking+skeleton) concept.",
-  "main": "all-one.js",
+  "main": "consume-ws.js",
   "scripts": {
     "test": "tape test.js | faucet",
     "lint": "standard",

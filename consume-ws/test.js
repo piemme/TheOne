@@ -1,9 +1,9 @@
 'use strict'
 
 var test = require('tape-catch')
-var allOne = require('./')()
+var consumeWs = require('./')()
 
 test('consumeOne() do something', function (t) {
-  allOne.consumeOne()
+  consumeWs.consumeOne()
   t.end()
 })
