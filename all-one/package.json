@@ -5,7 +5,8 @@
   "main": "all-one.js",
   "scripts": {
     "test": "tape test.js | faucet",
-    "lint": "standard"
+    "lint": "standard",
+    "sanity": "npm run lint && npm test"
   },
   "pre-commit": {
     "run": [

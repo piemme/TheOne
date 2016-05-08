@@ -4,11 +4,6 @@ var test = require('tape-catch')
 var stdout = require('test-console').stdout
 var allOne = require('./')()
 
-test('doOne() is 1', function (t) {
-  t.equal(allOne.doOne(), 1)
-  t.end()
-})
-
 test('showOne() show 1', function (t) {
   var inspect = stdout.inspect()
   allOne.showOne()

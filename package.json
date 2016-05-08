@@ -6,7 +6,9 @@
   "scripts": {
     "test": "./test.sh",
     "start": "node one-in-one.js",
-    "debug": "DEBUG=* node one-in-one.js"
+    "debug": "DEBUG=* node one-in-one.js",
+    "lint": "standard",
+    "sanity": "npm run lint && npm test"
   },
   "repository": {
     "type": "git",
@@ -19,6 +21,7 @@
   },
   "homepage": "https://github.com/piemme/TheOne#readme",
   "devDependencies": {
-    "debug": "^2.2.0"
+    "debug": "^2.2.0",
+    "standard": "^7.0.1"
   }
 }
