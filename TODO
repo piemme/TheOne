@@ -1,10 +1,14 @@
 TODO:
-separare il chiamante
 sistema di persistenza
 separare un modulo
-esporrre il risultato via HTTP
+esporre il risultato via HTTP
+aggiungere i test al modulo all-one
 
 
 DONE:
+v1
 aggiungere un test di accettazione sul risultato finale
 separare l'output del programma dal debug
+
+v1.2
+separare il chiamante
