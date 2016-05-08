@@ -1,0 +1,21 @@
+{
+  "name": "the-one",
+  "version": "1.0.0",
+  "description": "A simple exercise on nodejs and microservices. Inspired by [The Walking Skeleton] (http://alistair.cockburn.us/Walking+skeleton) concept.",
+  "main": "one-in-one.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node one-in-one.js""start"
+    
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/piemme/TheOne.git"
+  },
+  "author": "Paolo Manca",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/piemme/TheOne/issues"
+  },
+  "homepage": "https://github.com/piemme/TheOne#readme"
+}
