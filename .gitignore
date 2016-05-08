@@ -2,3 +2,4 @@ tmp
 node_modules
 all-one/node_modules
 super-simple-service/node_modules
+web-app/node_modules

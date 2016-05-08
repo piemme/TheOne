@@ -7,3 +7,4 @@ npm start | grep $expected &> /dev/null
 if [ $? == 0 ]; then
    echo "OK"
 fi
+
