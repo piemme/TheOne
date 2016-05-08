@@ -1,35 +1,35 @@
 'use strict'
-
+var debug = require('debug')('main')
 var result
 
 function theOne() {
-  console.log('*theOne*')
+  debug('*theOne*')
   return 1
 }
 
 function readTheOne() {
-  console.log('*readTheOne*')
+  debug('*readTheOne*')
   return theOne()
 }
 
 function writeTheOne() {
-  console.log('*writeTheOne*')
+  debug('*writeTheOne*')
   result = readTheOne()
 }
 
 function doOne() {
-  console.log('*doOne*')
+  debug('*doOne*')
   return result
 }
 
 function showOne() {
-  console.log('*showOne*')
-  console.log('OUTPUT: ' + doOne())
+  debug('*showOne*')
+  console.log(doOne())
 }
 
 function consumeOne() {
-  console.log('*consumeOne*')
-  doOne()
+  debug('*consumeOne*')
+  debug('consume service result: ' + doOne())
 }
 
 writeTheOne()
