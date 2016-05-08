@@ -5,8 +5,7 @@
   "main": "one-in-one.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node one-in-one.js""start"
-    
+    "start": "node one-in-one.js"
   },
   "repository": {
     "type": "git",
