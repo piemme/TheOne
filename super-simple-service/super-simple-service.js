@@ -1,35 +1,50 @@
 'use strict'
-
+var mongojs = require('mongojs')
 var debug = require('debug')('ssservice')
 
-// SYNC init (like read conf file)
+function superSimpleService() {
+  var connection = 'mongodb://localhost:27017/theone'
+  var collection = 'numbers'
+  var db = mongojs(connection, [collection])
+  var mycollection = db.collection(collection)
 
-function superSimpleService () {
-  var result
   return {
-    writeTheOne: writeTheOne,
-    doOne: doOne
+    writeTheOne: writeTheOne
+    , doOne: doOne
   }
 
-  function theOne () {
+  function theOne() {
     debug('*theOne*')
     return 1
   }
 
-  function readTheOne () {
+  function readTheOne() {
     debug('*readTheOne*')
     return theOne()
   }
 
-  function writeTheOne () {
+  function writeTheOne(callback) {
     debug('*writeTheOne*')
-    result = readTheOne()
+    var toInsert = {
+      "value": readTheOne()
+    }
+    mycollection.insert(toInsert, function (err, doc) {
+      debug(doc)
+      callback(err, doc)
+    })
   }
 
-  function doOne () {
+  function doOne(callback) {
     debug('*doOne*')
-    writeTheOne()
-    return result
+    writeTheOne(function (err, doc) {
+      mycollection.findOne({
+        _id: mongojs.ObjectId(doc._id)
+      }, function (err, doc) {
+        debug(doc)
+        db.close()
+        callback(null, doc)
+      })
+    })
   }
 }
 module.exports = superSimpleService

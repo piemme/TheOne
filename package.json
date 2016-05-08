@@ -7,7 +7,7 @@
     "test": "./test.sh",
     "start": "node one-access-as-web-application.js",
     "start:consumer": "node one-access-as-generic-consumer.js",
-    "debug": "DEBUG=* node one-in-one.js",
+    "debug": "DEBUG=* npm run start",
     "lint": "standard",
     "sanity": "npm run lint && npm test"
   },

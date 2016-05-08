@@ -1,6 +1,6 @@
 TODO:
 
-sistema di persistenza
+sistema di persistenza: mongodb
 
 separare modulo consumer
 distinguere servizio da moduli di acquisizione dati

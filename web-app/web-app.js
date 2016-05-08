@@ -22,9 +22,10 @@ function webApp () {
 
   function handler (request, reply) {
     debug('*showOne*')
-    var one = superSimpleService().doOne()
-    debug('result from one is: ' + one)
-    reply(one)
+    superSimpleService().doOne(function(err, result){
+      debug('result from one is: ' + result.value)
+      reply(result.value)
+    })
   }
 
   return {
