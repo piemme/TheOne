@@ -7,7 +7,7 @@
     "test": "tape test.js | faucet"
     , "lint": "standard"
   }
-  , "precommit": "lint", "test"
+  , "precommit": ["lint", "test"]
   , "author": ""
   , "license": "ISC"
   , "dependencies": {
