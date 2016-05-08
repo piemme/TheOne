@@ -1,7 +1,7 @@
 'use strict'
 
 var test = require('tape-catch')
-var stdout = require("test-console").stdout
+var stdout = require('test-console').stdout
 var allOne = require('./')()
 
 test('doOne() is 1', function (t) {
@@ -12,7 +12,7 @@ test('doOne() is 1', function (t) {
 test('showOne() show 1', function (t) {
   var inspect = stdout.inspect()
   allOne.showOne()
-  inspect.restore();
+  inspect.restore()
   t.deepEqual(inspect.output, ['1\n'])
   t.end()
 })

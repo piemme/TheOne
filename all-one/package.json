@@ -1,21 +1,32 @@
 {
-  "name": "all-one",
-  "version": "1.0.0",
-  "description": "",
-  "main": "all-one.js",
-  "scripts": {
+  "name": "all-one"
+  , "version": "1.0.0"
+  , "description": "A simple exercise on nodejs and microservices. Inspired by [The Walking Skeleton] (http://alistair.cockburn.us/Walking+skeleton) concept."
+  , "main": "all-one.js"
+  , "scripts": {
     "test": "tape test.js | faucet"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
+    , "lint": "standard"
+  }
+  , "precommit": [
+    "lint"
+    , "test"
+  ]
+  , "author": ""
+  , "license": "ISC"
+  , "dependencies": {
     "debug": "^2.2.0"
-  },
-  "devDependencies": {
-    "faucet": "0.0.1",
-    "standard": "^7.0.1",
-    "tape": "^4.5.1",
-    "tape-catch": "^1.0.5",
-    "test-console": "^1.0.0"
+  }
+  , "repository": {
+    "type": "git"
+    , "url": "git+https://github.com/piemme/TheOne.git"
+  }
+  , "devDependencies": {
+    "faucet": "0.0.1"
+    , "pre-commit": "^1.1.2"
+    , "standard": "^7.0.1"
+    , "tap-spec": "^4.1.1"
+    , "tape": "^4.5.1"
+    , "tape-catch": "^1.0.5"
+    , "test-console": "^1.0.0"
   }
 }

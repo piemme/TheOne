@@ -4,42 +4,42 @@ var debug = require('debug')('main')
 
 // SYNC init (like read conf file)
 
-function allOne() {
+function allOne () {
   var result
   return {
-    writeTheOne: writeTheOne
-    , doOne: doOne
-    , showOne: showOne
-    , consumeOne: consumeOne
+    writeTheOne: writeTheOne,
+    doOne: doOne,
+    showOne: showOne,
+    consumeOne: consumeOne
   }
 
-  function theOne() {
+  function theOne () {
     debug('*theOne*')
     return 1
   }
 
-  function readTheOne() {
+  function readTheOne () {
     debug('*readTheOne*')
     return theOne()
   }
 
-  function writeTheOne() {
+  function writeTheOne () {
     debug('*writeTheOne*')
     result = readTheOne()
   }
 
-  function doOne() {
+  function doOne () {
     debug('*doOne*')
     writeTheOne()
     return result
   }
 
-  function showOne() {
+  function showOne () {
     debug('*showOne*')
     console.log(doOne())
   }
 
-  function consumeOne() {
+  function consumeOne () {
     debug('*consumeOne*')
     debug('consume service result: ' + doOne())
   }
