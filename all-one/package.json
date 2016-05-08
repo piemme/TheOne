@@ -7,7 +7,7 @@
     "test": "tape test.js | faucet"
     , "lint": "standard"
   }
-  , "precommit": [
+  , "pre-commit": [
     "lint"
     , "test"
   ]

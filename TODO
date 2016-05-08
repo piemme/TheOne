@@ -1,9 +1,8 @@
 TODO:
 sistema di persistenza
-separare un modulo
+separare un modulo alla volta
 esporre il risultato via HTTP
-aggiungere i test al modulo all-one
-
+pulizia e standard
 
 DONE:
 v1
@@ -12,3 +11,6 @@ separare l'output del programma dal debug
 
 v1.2
 separare il chiamante
+
+v1.3
+aggiungere i test al modulo all-one
