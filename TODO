@@ -1,10 +1,10 @@
 TODO:
 
-
 fake web service
 schedulazione servizio acquisizione
 modulo web app come server
 dividere il modulo di servizio in logica + servizio http
+refactoring web app
 
 
 DONE:

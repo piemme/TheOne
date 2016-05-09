@@ -6,7 +6,8 @@
   "scripts": {
     "test": "tape test.js | faucet",
     "lint": "standard",
-    "sanity": "npm run lint && npm test"
+    "sanity": "npm run lint && npm test",
+    "start:server": "DEBUG=* node server.js"
   },
   "precommit": [
     "lint",
