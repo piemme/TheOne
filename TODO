@@ -1,9 +1,10 @@
 TODO:
 
-sistema di persistenza: mongodb
 
-separare modulo consumer
-distinguere servizio da moduli di acquisizione dati
+fake web service
+schedulazione servizio acquisizione
+modulo web app come server
+dividere il modulo di servizio in logica + servizio http
 
 
 DONE:
@@ -28,3 +29,12 @@ separare modulo web application
 separare modulo HTTP
 esporre il risultato via HTTP
 
+v1.7
+separare modulo consumer
+
+v.1.8
+sistema di persistenza: mongodb
+
+v1.9
+distinguere servizio da moduli di acquisizione dati
+conf db in file esterno

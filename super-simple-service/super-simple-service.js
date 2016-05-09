@@ -1,48 +1,25 @@
 'use strict'
 var mongojs = require('mongojs')
+var dataAcquisition = require('../data-acquisition')
+var connectionData = require('./config.js')
 var debug = require('debug')('ssservice')
 
 function superSimpleService () {
-  var connection = 'mongodb://localhost:27017/theone'
-  var collection = 'numbers'
-  var db = mongojs(connection, [collection])
-  var mycollection = db.collection(collection)
+  debug(connectionData)
+  var db = mongojs(connectionData.connection, [connectionData.collection])
+  var mycollection = db.collection(connectionData.collection)
 
   return {
-    writeTheOne: writeTheOne,
     doOne: doOne
-  }
-
-  function theOne () {
-    debug('*theOne*')
-    return 1
-  }
-
-  function readTheOne () {
-    debug('*readTheOne*')
-    return theOne()
-  }
-
-  function writeTheOne (callback) {
-    debug('*writeTheOne*')
-    var toInsert = {
-      'value': readTheOne()
-    }
-    mycollection.insert(toInsert, function (err, doc) {
-      if (err) {
-        callback(err)
-      }
-      debug(doc)
-      callback(err, doc)
-    })
   }
 
   function doOne (callback) {
     debug('*doOne*')
-    writeTheOne(function (err, doc) {
+    dataAcquisition().writeTheOne(function (err, doc) {
       if (err) {
         callback(err)
       }
+      debug('one is written')
       mycollection.findOne({
         _id: mongojs.ObjectId(doc._id)
       }, function (err, doc) {
